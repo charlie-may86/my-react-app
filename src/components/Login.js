@@ -1,28 +1,44 @@
-import React from 'react' 
-// import axios from 'axios'
+import React, { useState } from "react";
+// import axios from "axios";
 
 const Login = () => {
-    return (
-        <div>
-            <form>
-                <input
-                    type='text'
-                    name='username'
-                    value='charlie boy'
-                />
-                <input 
-                    type='text'
-                    name='phone number'
-                    value='210-355-9825'
-                />
-                <input 
-                    type='password'
-                    name='password'
-                    value=''
-                />
-            </form>
-        </div>
-    )
-}
+  const [credentials, setCredentials] = useState({
+    email: "",
+    password: "",
+  });
 
-export default Login
+console.log(credentials);
+
+  const handleCredentials = (e) => {
+    setCredentials({
+      ...credentials,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const login = (e) => {
+    console.log("this is the submit button", credentials);
+  };
+
+  return (
+    <div>
+      <form onSubmit={login}>
+        <input
+          type="email"
+          name="email"
+          value={credentials.email}
+          onChange={handleCredentials}
+        />
+        <input
+          type="password"
+          name="password"
+          value={credentials.password}
+          onChange={handleCredentials}
+        />
+        <button>Log in</button>
+      </form>
+    </div>
+  );
+};
+
+export default Login;

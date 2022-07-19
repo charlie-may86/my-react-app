@@ -7,7 +7,7 @@ const Login = () => {
     password: "",
   });
 
-console.log(credentials);
+
 
   const handleCredentials = (e) => {
     setCredentials({
@@ -17,7 +17,7 @@ console.log(credentials);
   };
 
   const login = (e) => {
-    console.log("this is the submit button", credentials);
+   
   };
 
   return (

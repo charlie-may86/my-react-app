@@ -2,10 +2,11 @@
 // import './App.scss';
 
 import React from "react";
-import CollegeFootball from "./components/CollegeFootball";
+import UserPage from "./components/UserPage";
 import SignUp from "./components/SignUp";
 import ErrorPage from "./components/ErrorPage";
 import HomePage from "./components/HomePage";
+import CollegeFootball from "./components/CollegeFootball";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/userPage" element={<CollegeFootball />} />
+        <Route path="/userPage" element={<UserPage />} />
+        <Route path="/cfb_pick_em" element={<CollegeFootball />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [credentials, setCredentials] = useState({
@@ -15,12 +16,14 @@ const SignUp = () => {
     });
   };
 
+  const navigate = useNavigate();
   const register = (e) => {
     e.preventDefault();
     axios
       .post("http://localhost:9000/api/auth/register", credentials)
       .then((res) => {
         console.log(res);
+        navigate("/userPage");
       })
       .catch((err) => {
         console.log(err);

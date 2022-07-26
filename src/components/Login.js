@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
   });
-
-
 
   const handleCredentials = (e) => {
     setCredentials({
@@ -17,7 +15,16 @@ const Login = () => {
   };
 
   const login = (e) => {
-   
+    e.preventDefault();
+    axios
+      .post("http://localhost:9000/api/auth/login", credentials)
+      .then((res) => {
+        console.log(res);
+        localStorage.setItem("token", res.data.token);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (

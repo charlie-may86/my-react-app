@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import {useNavigate} from 'react-router-dom'
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
@@ -14,6 +15,8 @@ const Login = () => {
     });
   };
 
+  const navigate = useNavigate()
+
   const login = (e) => {
     e.preventDefault();
     axios
@@ -21,6 +24,7 @@ const Login = () => {
       .then((res) => {
         console.log(res);
         localStorage.setItem("token", res.data.token);
+        navigate('/userPage')
       })
       .catch((err) => {
         console.log(err);

@@ -4,6 +4,7 @@
 import React from "react";
 import Login from "./components/Login";
 import CollegeFootball from './components/CollegeFootball'
+import SignUp from './components/SignUp'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <p>Hey - It's Charlie Boy</p>
       <Login />
       <CollegeFootball />
+      <SignUp />
     </div>
   );
 }

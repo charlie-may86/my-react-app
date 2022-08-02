@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const CollegeFootball = () => {
-  const [data, setData] = useState({});
+  const [myData, setmyData] = useState({});
+
+  //   https://sportsdata.io/developers/api-documentation/ncaa-football#/sports-data
 
   useEffect(() => {
     axios.get("http://localhost:9000/api/cfb").then((res) => {
-      console.log(res);
+      setmyData(
+        res.data.filter((x) => x.HomeTeam === "NEBR" || x.AwayTeam === "NEBR")
+      );
     });
   }, []);
 

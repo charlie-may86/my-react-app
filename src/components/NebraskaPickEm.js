@@ -1,16 +1,30 @@
 import React, { useContext } from "react";
 
-import { NebContext } from "./CollegeFootball";
+import { NebContext} from "./CollegeFootball";
 
 const NebPickEm = () => {
-  const data = useContext(NebContext);
-  console.log(data);
-  return (
-    <div>
-      <div>Game 1</div>
-      <div>Game 2</div>
-    </div>
-  );
+  const {myData, isLoading} = useContext(NebContext);
+  console.log(myData);
+  console.log(isLoading);
+
+
+  const skedyFactory = () => {
+    myData.forEach((x) => {
+      return <div>{x.DateTime}</div>;
+    });
+  };
+
+if(!isLoading) {
+    return <div>loading</div>
+} else {
+    return(
+        <div>
+            <div>{new Date(myData[0].DateTime).toDateString()}</div>
+        </div>
+    )
+}
+
+  
 };
 
 export default NebPickEm;

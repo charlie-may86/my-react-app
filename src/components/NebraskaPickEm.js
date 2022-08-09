@@ -19,6 +19,20 @@ const NebPickEm = () => {
                   ? `@ ${x.HomeTeamName}`
                   : `vs ${x.AwayTeamName}`}
               </div>
+              <div>
+                {x.DateTime
+                  ? new Date(x.DateTime).toLocaleTimeString("en-US", {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })
+                  : "TBD"}
+              </div>
+              <div>
+                  {x.OverUnder ? x.OverUnder : 'Available Game Week'}
+              </div>
+              <div>
+                  {x.PointSpread ? x.PointSpread : 'Available Game Week'}
+              </div>
             </div>
           );
         })}

@@ -11,12 +11,16 @@ const NebPickEm = () => {
     return (
       <>
         {myData.map((x) => {
-          if (x.DateTime) {
-            return (
-              <div>{new Date(x.DateTime).toDateString().slice(0, 10)}</div>
-            );
-          }
-          return <div>TBD</div>;
+          return (
+            <div>
+              <div>{new Date(x.Day).toDateString().slice(0, 10)}</div>
+              <div>
+                {x.AwayTeam == "NEBR"
+                  ? `@ ${x.HomeTeamName}`
+                  : `vs ${x.AwayTeamName}`}
+              </div>
+            </div>
+          );
         })}
       </>
     );

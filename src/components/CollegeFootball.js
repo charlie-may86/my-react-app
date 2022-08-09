@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import axios from "axios";
+import NebPickEm from "./NebraskaPickEm";
+
+export const NebContext = createContext();
 
 const CollegeFootball = () => {
   const [myData, setmyData] = useState({});
@@ -15,9 +18,10 @@ const CollegeFootball = () => {
   }, []);
 
   return (
-    <div>
+    <NebContext.Provider value={myData}>
       <h1>This is cfb pickem app</h1>
-    </div>
+      <NebPickEm />
+    </NebContext.Provider>
   );
 };
 

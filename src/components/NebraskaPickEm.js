@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 
 import { NebContext } from "./CollegeFootball";
 
+import "../../src/styles.scss";
+
 const NebPickEm = () => {
   const { myData, isLoading } = useContext(NebContext);
   console.log(myData);
@@ -15,7 +17,7 @@ const NebPickEm = () => {
             <div>
               <div>{new Date(x.Day).toDateString().slice(0, 10)}</div>
               <div>
-                {x.AwayTeam == "NEBR"
+                {x.AwayTeam === "NEBR"
                   ? `@ ${x.HomeTeamName}`
                   : `vs ${x.AwayTeamName}`}
               </div>
@@ -27,12 +29,8 @@ const NebPickEm = () => {
                     })
                   : "TBD"}
               </div>
-              <div>
-                  {x.OverUnder ? x.OverUnder : 'Available Game Week'}
-              </div>
-              <div>
-                  {x.PointSpread ? x.PointSpread : 'Available Game Week'}
-              </div>
+              <div>{x.OverUnder ? x.OverUnder : "Available Game Week"}</div>
+              <div>{x.PointSpread ? x.PointSpread : "Available Game Week"}</div>
             </div>
           );
         })}

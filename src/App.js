@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-// import './App.scss';
+import "./styles.scss";
 
 import React from "react";
 import UserPage from "./components/UserPage";

@@ -11,16 +11,15 @@ const NebPickEm = () => {
 
   const skedyFactory = () => {
     return (
-        
       <div className="schedule">
-          <h2>Nebraska Cornhuskers Schedule 2022</h2>
-          <h3>Regular Season</h3>
-        <div className='heading'>
+        <h2>Nebraska Cornhuskers Schedule 2022</h2>
+        <h3>Regular Season</h3>
+        <div className="heading">
           <div>date</div>
           <div>opponent</div>
           <div>time</div>
-          <div>over/under</div>
-          <div>point spread</div>
+          <div>Point Spread</div>
+          <div>Pick em'!</div>
         </div>
         {myData.map((x) => {
           return (
@@ -41,9 +40,11 @@ const NebPickEm = () => {
                     })
                   : "TBD"}
               </div>
-              <div>{x.OverUnder ? x.OverUnder : "Available Game Week"}</div>
-              <div className="spread">
-                {x.PointSpread ? x.PointSpread : "Available Game Week"}
+              {/* <div>{x.OverUnder ? x.OverUnder : "Available Game Week"}</div> */}
+              <div>{x.PointSpread ? x.PointSpread : "Available Game Week"}</div>
+              <div className='buttonDiv'>
+                <button class="pickEm">{x.AwayTeam.slice(0, 4)}</button>{" "}
+                <button className="pickEm">{x.HomeTeam.slice(0, 4)}</button>
               </div>
             </div>
           );

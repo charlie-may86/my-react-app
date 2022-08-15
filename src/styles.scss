@@ -135,6 +135,10 @@ table {
 
 /* General Styles */
 
+// * {
+//   border: 1px solid black;
+// }
+
 html {
   font-size: 62.5%; /*This makes 1 rem = 10px and is a scalable unit*/
 }
@@ -179,4 +183,36 @@ section {
 }
 
 /* Pickem Game */
+
+.schedule {
+  margin: 5% 20%;
+}
+
+.gameWeek {
+  display: flex;
+  flex-direction: row;
+}
+
+.gameWeek div {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.gameWeek:nth-child(even) {
+  background-color: lightgray;
+}
+
+.heading{
+  display: flex;
+}
+
+.heading div {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+  text-transform:uppercase;
+}
+
 

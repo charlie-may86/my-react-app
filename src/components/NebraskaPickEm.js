@@ -5,7 +5,7 @@ import { NebContext } from "./CollegeFootball";
 import "../../src/styles.scss";
 
 const NebPickEm = () => {
-  const { myData, isLoading } = useContext(NebContext);
+  const { myData, isLoading, handleClick } = useContext(NebContext);
   console.log(myData);
   console.log(isLoading);
 
@@ -23,7 +23,7 @@ const NebPickEm = () => {
         </div>
         {myData.map((x) => {
           return (
-            <div className="gameWeek">
+            <div className="gameWeek" key={x.GameID}>
               <div className="date">
                 {new Date(x.Day).toDateString().slice(0, 10)}
               </div>
@@ -42,8 +42,10 @@ const NebPickEm = () => {
               </div>
               {/* <div>{x.OverUnder ? x.OverUnder : "Available Game Week"}</div> */}
               <div>{x.PointSpread ? x.PointSpread : "Available Game Week"}</div>
-              <div className='buttonDiv'>
-                <button class="pickEm">{x.AwayTeam.slice(0, 4)}</button>{" "}
+              <div className="buttonDiv">
+                <button className="pickEm" onClick={handleClick} value={x.AwayTeam.slice(0, 4)}>
+                  {x.AwayTeam.slice(0, 4)}
+                </button>{" "}
                 <button className="pickEm">{x.HomeTeam.slice(0, 4)}</button>
               </div>
             </div>

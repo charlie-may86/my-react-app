@@ -4,18 +4,20 @@ import NebPickEm from "./NebraskaPickEm";
 
 export const NebContext = createContext();
 
-
-
 const CollegeFootball = () => {
   const [myData, setmyData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-  const [pick, setPick] = useState('This is not a pick')
+  const [pick, setPick] = useState({});
 
   //   https://sportsdata.io/developers/api-documentation/ncaa-football#/sports-data
 
   const handleClick = (val) => {
-    setPick(val.target.value)
-  }
+    setPick({
+      winner: val.target.value,
+      key: val.target.name,
+    });
+  };
+
   useEffect(() => {
     axios
       .get("http://localhost:9000/api/cfb")
@@ -31,7 +33,7 @@ const CollegeFootball = () => {
   }, []);
 
   return (
-    <NebContext.Provider value={{myData, isLoading, handleClick}}>
+    <NebContext.Provider value={{ myData, isLoading, handleClick }}>
       <h1>This is cfb pickem app</h1>
       <NebPickEm />
     </NebContext.Provider>

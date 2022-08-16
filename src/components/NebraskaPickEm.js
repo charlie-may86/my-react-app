@@ -43,10 +43,22 @@ const NebPickEm = () => {
               {/* <div>{x.OverUnder ? x.OverUnder : "Available Game Week"}</div> */}
               <div>{x.PointSpread ? x.PointSpread : "Available Game Week"}</div>
               <div className="buttonDiv">
-                <button className="pickEm" onClick={handleClick} value={x.AwayTeam.slice(0, 4)}>
+                <button
+                  className="pickEm"
+                  onClick={handleClick}
+                  value={x.AwayTeam.slice(0, 4)}
+                  name={x.PointSpread}
+                >
                   {x.AwayTeam.slice(0, 4)}
                 </button>{" "}
-                <button className="pickEm">{x.HomeTeam.slice(0, 4)}</button>
+                <button
+                  className="pickEm"
+                  onClick={handleClick}
+                  value={x.HomeTeam.slice(0, 4)}
+                  name={x.PointSpread}
+                >
+                  {x.HomeTeam.slice(0, 4)}
+                </button>
               </div>
             </div>
           );

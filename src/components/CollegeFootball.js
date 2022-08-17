@@ -13,9 +13,22 @@ const CollegeFootball = () => {
 
   const handleClick = (val) => {
     setPick({
+      username: "Charlie",
       winner: val.target.value,
-      key: val.target.name,
+      spread: val.target.name,
     });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:9000/api/cfb/pickem", pick)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   useEffect(() => {
@@ -35,6 +48,7 @@ const CollegeFootball = () => {
   return (
     <NebContext.Provider value={{ myData, isLoading, handleClick }}>
       <h1>This is cfb pickem app</h1>
+      <button onClick={handleSubmit}>Submit Picks</button>
       <NebPickEm />
     </NebContext.Provider>
   );

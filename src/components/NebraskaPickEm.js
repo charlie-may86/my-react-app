@@ -9,7 +9,8 @@ const NebPickEm = () => {
   console.log(myData);
   console.log(isLoading);
 
-  const skedyFactory = () => {
+  //offload the skedy facotry to its own place
+  const SkedyFactory = () => {
     return (
       <div className="schedule">
         <h2>Nebraska Cornhuskers Schedule 2022</h2>
@@ -72,7 +73,7 @@ const NebPickEm = () => {
   } else {
     return (
       <div>
-        <div>{skedyFactory()}</div>
+        <div>{SkedyFactory()}</div>
       </div>
     );
   }

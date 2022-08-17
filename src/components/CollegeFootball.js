@@ -1,6 +1,7 @@
 import React, { useState, useEffect, createContext } from "react";
 import axios from "axios";
 import NebPickEm from "./NebraskaPickEm";
+import SubmitPicks from "./SubmitPicks";
 
 export const NebContext = createContext();
 
@@ -46,9 +47,9 @@ const CollegeFootball = () => {
   }, []);
 
   return (
-    <NebContext.Provider value={{ myData, isLoading, handleClick }}>
+    <NebContext.Provider value={{ myData, isLoading, pick, handleClick, handleSubmit }}>
       <h1>This is cfb pickem app</h1>
-      <button onClick={handleSubmit}>Submit Picks</button>
+      <SubmitPicks />
       <NebPickEm />
     </NebContext.Provider>
   );

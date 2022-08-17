@@ -252,3 +252,23 @@ section {
   position: relative;
   top: 1px;
 }
+
+
+.pick {
+  display: flex;
+  flex-direction: row;
+  margin-right: 80%;
+  margin-left: 5px
+}
+
+.pick div {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.submitPicksButton {
+  margin-left: 3px;
+}
+

@@ -18,6 +18,7 @@ const CollegeFootball = () => {
       winner: val.target.value,
       spread: val.target.name,
     });
+    console.log(val.value);
   };
 
   const handleSubmit = (e) => {
@@ -25,7 +26,7 @@ const CollegeFootball = () => {
     axios
       .post("http://localhost:9000/api/cfb/pickem", pick)
       .then((res) => {
-        console.log(res);
+        setPick({});
       })
       .catch((err) => {
         console.log(err);
@@ -47,7 +48,9 @@ const CollegeFootball = () => {
   }, []);
 
   return (
-    <NebContext.Provider value={{ myData, isLoading, pick, handleClick, handleSubmit }}>
+    <NebContext.Provider
+      value={{ myData, isLoading, pick, handleClick, handleSubmit }}
+    >
       <h1>This is cfb pickem app</h1>
       <SubmitPicks />
       <NebPickEm />

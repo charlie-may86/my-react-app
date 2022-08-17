@@ -4,7 +4,7 @@ import { NebContext } from "./CollegeFootball";
 import "../../src/styles.scss";
 
 const SubmitPicks = () => {
-  const { pick } = useContext(NebContext);
+  const { pick, handleSubmit } = useContext(NebContext);
 
   return (
     <div>
@@ -22,7 +22,9 @@ const SubmitPicks = () => {
           <div>{pick.spread ? pick.spread : "-"}</div>
         </div>
       </div>
-      <button className="submitPicksButton">Submit Pick</button>
+      <button className="submitPicksButton" onClick={handleSubmit}>
+        Submit Pick
+      </button>
     </div>
   );
 };

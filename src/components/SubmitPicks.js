@@ -5,7 +5,6 @@ import "../../src/styles.scss";
 
 const SubmitPicks = () => {
   const { pick, handleSubmit } = useContext(NebContext);
-  // refactor this a form
   return (
     <div>
       <form onSubmit={handleSubmit}>

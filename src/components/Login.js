@@ -34,6 +34,7 @@ const Login = () => {
   return (
     <div>
       <form onSubmit={login}>
+        <div>
         <input
           type="email"
           name="email"
@@ -46,6 +47,7 @@ const Login = () => {
           value={credentials.password}
           onChange={handleCredentials}
         />
+        </div>
         <button>Log in</button>
       </form>
     </div>

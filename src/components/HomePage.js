@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "./Login";
+import Header from './Header'
 import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
@@ -10,7 +11,7 @@ const HomePage = () => {
   };
   return (
     <div>
-      <h1>This is the Charlie may home page </h1>
+      <Header />
       <Login />
       <button onClick={handleClick}>Register</button>
     </div>

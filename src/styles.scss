@@ -135,9 +135,9 @@ table {
 
 /* General Styles */
 
-// * {
-//   border: 1px solid black;
-// }
+* {
+  border: 1px solid black;
+}
 
 html {
   font-size: 62.5%; /*This makes 1 rem = 10px and is a scalable unit*/
@@ -180,6 +180,21 @@ a {
 
 section {
   padding: 4% 0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+
+.header_nav {
+  display: flex;
+}
+
+.header_nav ul {
+  display: flex
 }
 
 /* Pickem Game */
@@ -253,12 +268,11 @@ section {
   top: 1px;
 }
 
-
 .pick {
   display: flex;
   flex-direction: row;
   margin-right: 80%;
-  margin-left: 5px
+  margin-left: 5px;
 }
 
 .pick div {
@@ -274,7 +288,7 @@ section {
 
 //resume
 .resume {
-  margin: 1% 1%
+  margin: 1% 1%;
 }
 
 .headshot {

@@ -5,26 +5,28 @@ import "../../src/styles.scss";
 
 const SubmitPicks = () => {
   const { pick, handleSubmit } = useContext(NebContext);
-
+  // refactor this a form
   return (
     <div>
-      <div className="submitPicks">
-        <div className="pick">
-          <div>Game</div>
-          <div>{"-"}</div>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <input type="text" name="game" value="Game" />
+          <input
+            type="text"
+            name="gamePick"
+            value={pick.winner ? pick.winner : "-"}
+          />
         </div>
-        <div className="pick">
-          <div>Winner</div>
-          <div>{pick.winner ? pick.winner : "-"}</div>
+        <div>
+          <input type="text" name="pick" value="Winner" />
+          <input
+            type="text"
+            name="winner"
+            value={pick.spread ? pick.spread : "-"}
+          />
         </div>
-        <div className="pick">
-          <div>Point Spread</div>
-          <div>{pick.spread ? pick.spread : "-"}</div>
-        </div>
-      </div>
-      <button className="submitPicksButton" onClick={handleSubmit}>
-        Submit Pick
-      </button>
+        <button>Submit Pick</button>
+      </form>
     </div>
   );
 };

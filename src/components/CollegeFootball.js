@@ -13,6 +13,7 @@ const CollegeFootball = () => {
   //   https://sportsdata.io/developers/api-documentation/ncaa-football#/sports-data
 
   const handleClick = (val) => {
+    // refactor this to search my data for the id and then return all the data you need
     setPick({
       username: "Charlie",
       winner: val.target.value,

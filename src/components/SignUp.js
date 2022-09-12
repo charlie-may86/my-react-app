@@ -33,6 +33,7 @@ const SignUp = () => {
   return (
     <div>
       <form onSubmit={register}>
+        <label htmlFor="email">Email</label>
         <input
           type="email"
           name="email"

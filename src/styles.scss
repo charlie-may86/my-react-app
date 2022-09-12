@@ -135,9 +135,9 @@ table {
 
 /* General Styles */
 
-* {
-  border: 1px solid black;
-}
+// * {
+//   border: 1px solid black;
+// }
 
 html {
   font-size: 62.5%; /*This makes 1 rem = 10px and is a scalable unit*/
@@ -185,8 +185,8 @@ section {
 /* Header */
 .header {
   display: flex;
-  padding-right: 16px;
-  padding-left: 16px;
+  padding-right: 2%;
+  padding-left: 2%;
   
 }
 
@@ -195,7 +195,7 @@ section {
 }
 
 .headerName h1 {
-  padding-left: 5%
+  padding-left: 3%
 }
 
 .headerNav {
@@ -204,7 +204,16 @@ section {
   align-items: center;
 }
 
+/*Home page login*/
+.login {
+  margin-left: 4%;
+  margin-right: 75%;
+}
 
+.homePageLogin {
+  display: flex;
+  flex-direction: column;
+}
 
 
 /* Pickem Game */

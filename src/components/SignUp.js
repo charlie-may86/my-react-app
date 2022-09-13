@@ -31,7 +31,7 @@ const SignUp = () => {
   };
 
   return (
-    <div>
+    <div className="signUp">
       <form onSubmit={register}>
         <label htmlFor="email">Email</label>
         <input
@@ -40,19 +40,21 @@ const SignUp = () => {
           value={credentials.email}
           onChange={handleCredentials}
         />
+        <label htmlFor="username">Username</label>
         <input
           type="username"
           name="username"
           value={credentials.username}
           onChange={handleCredentials}
         />
+        <label htmlFor="password">Password</label>
         <input
           type="password"
           name="password"
           value={credentials.password}
           onChange={handleCredentials}
         />
-        <button>Register</button>
+        <button className="loginRegister">Register</button>
       </form>
     </div>
   );

@@ -17,6 +17,10 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  const handleRegister = () => {
+    navigate("/signup");
+  };
+
   const login = (e) => {
     e.preventDefault();
     axios
@@ -32,7 +36,7 @@ const Login = () => {
   };
 
   return (
-    <div className='login'>
+    <div className="login">
       <form onSubmit={login} className="homePageLogin">
         <label htmlFor="email">Email</label>
         <input
@@ -49,7 +53,10 @@ const Login = () => {
           onChange={handleCredentials}
         />
 
-        <button>Log in</button>
+        <button className="loginRegister">Log in</button>
+        <button className="loginRegister" onClick={handleRegister}>
+          Register
+        </button>
       </form>
     </div>
   );

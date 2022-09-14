@@ -2,8 +2,6 @@ import React, { useContext } from "react";
 
 import { NebContext } from "./CollegeFootball";
 
-import "../../src/styles.scss";
-
 const NebPickEm = () => {
   const { myData, isLoading, handleClick } = useContext(NebContext);
   console.log(myData);

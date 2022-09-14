@@ -8,6 +8,7 @@ import ErrorPage from "./components/ErrorPage";
 import HomePage from "./components/HomePage";
 import CollegeFootball from "./components/CollegeFootball";
 import Resume from "./components/Resume";
+import ChessGame from "./components/chessGame/ChessGame";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/userPage" element={<UserPage />} />
+        <Route path="/chessGame" element={<ChessGame />} />
         <Route path="/cfb_pick_em" element={<CollegeFootball />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="*" element={<ErrorPage />} />

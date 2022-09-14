@@ -38,21 +38,25 @@ const Resume = () => {
         <p className="school">Bloomtech</p>
         <br />
       </div>
-      <div className="TechSkills">
+      <div>
         <h2>Technical Skills</h2>
         <div>
           <p>
-            Frontend: React.js, Redux, Hooks, Context API, Axios, JavaScript,
-            HTML, CSS
+            <b className="bold">Frontend:</b> React.js, Redux, Hooks, Context
+            API, Axios, JavaScript, HTML, CSS
           </p>
-          <p>Backend: Node.js, Express, SQL, Postgres, Knex.js, Jest</p>
           <p>
-            Additional Skills: Algorithms, Debugging, Deployment, Heroku,
-            Machine learning, Python, GitHub, VS Code, Postman
+            <b className="bold">Backend:</b> Node.js, Express, SQL, Postgres,
+            Knex.js, Jest
+          </p>
+          <p>
+            <b className="bold">Additional Skills:</b> Algorithms, Debugging,
+            Deployment, Heroku, Machine learning, Python, GitHub, VS Code,
+            Postman
           </p>
         </div>
       </div>
-      <br/>
+      <br />
       <div className=" Work">
         <h2>Work Experience</h2>
         <div className="company">

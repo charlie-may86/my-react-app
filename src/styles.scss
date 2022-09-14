@@ -155,12 +155,6 @@ h3 {
   letter-spacing: 3px;
 }
 
-h1,
-h2,
-h3 {
-  letter-spacing: 3px;
-}
-
 h1 {
   font-size: 5rem;
 }
@@ -367,7 +361,7 @@ section {
 /*Resume */
 
 .resume {
-  margin: 1%;
+  margin: 1% 15%;
 }
 
 .headshot {
@@ -378,6 +372,10 @@ section {
 .header {
   display: flex;
 }
+
+// .intro {
+//   display: flex;
+// }
 .headerImage {
   display: inline-block;
 }
@@ -389,6 +387,7 @@ section {
 .resume h2 {
   font-size: 2rem;
 }
+
 
 .resume p {
   font-size: 1.2rem;
@@ -413,4 +412,9 @@ section {
 
 .title {
   font-style: italic;
+}
+
+
+.bold {
+  font-weight: bold;
 }

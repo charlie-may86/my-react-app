@@ -1,5 +1,5 @@
 import React from "react";
-import headshot from './images/ChasHeadShot.jpg'
+import headshot from "./images/ChasHeadShot.jpg";
 
 const Resume = () => {
   return (
@@ -15,8 +15,8 @@ const Resume = () => {
         <div className="intro">
           <h1>Charlie May</h1>
           <p>
-            I am a Full Stack Web Developer. I love coffee, doing averagly at
-            endurances races, and my dogs.
+            I am a full stack web developer. I love coffee, traveling, and my
+            dogs.
           </p>
         </div>
       </header>
@@ -33,10 +33,26 @@ const Resume = () => {
         <br />
         <div className="company">
           <p className="degree">Fullstack Software Engineer</p>
-          <p>Graduation Date August 2022</p>
+          <p>Graduation Date April 2022</p>
         </div>
         <p className="school">Bloomtech</p>
+        <br />
       </div>
+      <div className="TechSkills">
+        <h2>Technical Skills</h2>
+        <div>
+          <p>
+            Frontend: React.js, Redux, Hooks, Context API, Axios, JavaScript,
+            HTML, CSS
+          </p>
+          <p>Backend: Node.js, Express, SQL, Postgres, Knex.js, Jest</p>
+          <p>
+            Additional Skills: Algorithms, Debugging, Deployment, Heroku,
+            Machine learning, Python, GitHub, VS Code, Postman
+          </p>
+        </div>
+      </div>
+      <br/>
       <div className=" Work">
         <h2>Work Experience</h2>
         <div className="company">
@@ -50,12 +66,21 @@ const Resume = () => {
           output run rates 8%
         </p>
         <p>
-          ● Leveraged Microsoft Excel and its programing language to create a
-          data model to manage the incentive program{" "}
+          ● Leveraged Microsoft Excel to create a data model to manage the
+          incentive program
         </p>
         <p>
           ● Created Last-Mile Program which saved 632 operator hours and
           generated 2,370,271 additional mail sets in the first two months
+        </p>
+        <p>
+          ● Lead operations project for $2M+ installation of output tracking
+          technology
+        </p>
+        <p>
+          ● Developed a machine learning algorithm using random forest
+          regression to predict runtime and generate standards in our print/mail
+          shops
         </p>
         <br />
         <div className="company">
@@ -107,19 +132,23 @@ const Resume = () => {
           clothes subscription company
         </p>
         <p>
-          ● Overcame lack of technical skill in founding team by making a deal
-          with a local developer to build storkwear.com
+          ● Overcame lack of technical skill in founding team by working with a
+          local developer and their team to build storkwear.com
         </p>
-        <p>● Managed the budget and team that built storkwear.com</p>
+        <p>
+          ● Worked with Drip and Instapage to create automated sales funnel
+          around weekly content for pregnant moms
+        </p>
         <p>
           ● Worked with Drip and Instapage to build automated sales funnel
           around weekly content for pregnant moms
         </p>
         <p>
-          ● Purchased clothes, built an inventory system, branded the company,
-          built a distribution system
+          ● Sourced and purchased clothes for boys and girls from newborn to age
+          24 months
         </p>
-        <p>● Eventually ran out of money and closed up shop</p>
+        <p>● Built an inventory management and distribution system</p>
+        <p>● Branded the company with the help of local graphic designers</p>
       </div>
       <br />
       <div className="miliatry">

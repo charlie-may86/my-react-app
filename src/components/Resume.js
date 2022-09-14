@@ -1,5 +1,5 @@
 import React from "react";
-import headshot from "./images/ChasHeadShot.jpg";
+import headshot from './images/ChasHeadShot.jpg'
 
 const Resume = () => {
   return (
@@ -20,24 +20,22 @@ const Resume = () => {
           </p>
         </div>
       </header>
-      <div className="Eduaction">
+      <div className=" Eduaction">
         <h2>Education</h2>
         <div className="company">
-          <h3 className="school">University of Nebraska at Omaha</h3>
           <p className="degree">
             Bachelor of Science in Business Administration
           </p>
           <p>Graduation Date August 2016</p>
         </div>
+
+        <p className="school">University of Nebraska at Omaha</p>
         <br />
         <div className="company">
-          <h3 className="school">Bloomtech</h3>
           <p className="degree">Fullstack Software Engineer</p>
           <p>Graduation Date August 2022</p>
         </div>
-      </div>
-      <div className="technicalSkills">
-        <h2>Technical Skills</h2>
+        <p className="school">Bloomtech</p>
       </div>
       <div className=" Work">
         <h2>Work Experience</h2>

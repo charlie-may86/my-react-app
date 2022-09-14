@@ -363,3 +363,54 @@ section {
 .gameArea {
   display: flex;
 }
+
+/*Resume */
+
+.resume {
+  margin: 1%;
+}
+
+.headshot {
+  border-radius: 50%;
+  width: 10%;
+}
+
+.header {
+  display: flex;
+}
+.headerImage {
+  display: inline-block;
+}
+
+.resume h1 {
+  font-size: 2.5rem;
+}
+
+.resume h2 {
+  font-size: 2rem;
+}
+
+.resume p {
+  font-size: 1.2rem;
+}
+
+.degree {
+  font-weight: bold;
+}
+
+.school {
+  font-style: italic;
+}
+
+.company {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company.name {
+  font-weight: bold;
+}
+
+.title {
+  font-style: italic;
+}

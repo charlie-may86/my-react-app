@@ -422,11 +422,11 @@ section {
 /*ChessBoard part du*/
 #chessboard {
   display: grid;
-  grid-template-columns: repeat(8, 100px);
-  grid-template-rows: repeat(8, 100px);
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
   background-color: #4b8f29;
-  width: 800px;
-  height: 800px;
+  width: 400px;
+  height: 400px;
 }
 
 .black-tile {

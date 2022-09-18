@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 
 import Board from "./components/Board";
+import BoardPartDu from './components/BoardPartDu'
 import Header from "./components/ChessHeader";
 import GameButtons from "./components/GameButtons";
 import RandomSquareGenerator from "./logic/RandomSquareGenerator";
@@ -60,7 +61,7 @@ const ChessGame = () => {
         <div>
           <Header />
           <div className="gameArea">
-            <Board />
+            <BoardPartDu />
             <div>
               <button className="gameButton" onClick={chessGameClick}>
                 {count === 0 ? "start" : "stop"}

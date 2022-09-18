@@ -12,14 +12,14 @@ const ChessBoard = () => {
 
       if (num % 2 === 0) {
         board.push(
-          <div className="tile black-tile">
+          <div className={`${horzAxis[i]}${vertAxis[j]} black-tile`} >
             [{horzAxis[i]}
             {vertAxis[j]}]
           </div>
         );
       } else {
         board.push(
-          <div className="tile white-tile">
+          <div className={`${horzAxis[i]}${vertAxis[j]} white-tile`}>
             [{horzAxis[i]}
             {vertAxis[j]}]
           </div>

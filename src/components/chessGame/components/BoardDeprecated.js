@@ -1,5 +1,5 @@
 import React from "react";
-import SquareFactory from "./SquareFactory";
+import SquareFactory from "./SquareFactoryDebrecated";
 import styled from "styled-components";
 
 const StyledBoard = styled.div`

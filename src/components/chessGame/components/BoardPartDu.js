@@ -4,7 +4,7 @@ import AnswerContext from "../context/AnswerContext";
 import squareClick from "../logic/SquareClick";
 
 const ChessBoard = () => {
-  const horzAxis = ["a", "b", "c", "d", "e", "f", "g", "h"];
+  const horzAxis = ["A", "B", "C", "D", "E", "F", "G", "H"];
   const vertAxis = ["1", "2", "3", "4", "5", "6", "7", "8"];
 
   let board = [];
@@ -13,8 +13,7 @@ const ChessBoard = () => {
   const value = useContext(AnswerContext);
 
   const handleClick = (e) => {
-    
-    console.log(e.target.className);
+    squareClick(e, whichSquare, value)
   };
 
   for (let j = vertAxis.length - 1; j >= 0; j--) {

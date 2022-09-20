@@ -3,6 +3,7 @@ import BoardPartDu from './components/BoardPartDu'
 import Header from "./components/ChessHeader";
 import GameButtons from "./components/GameButtons";
 import RandomSquareGenerator from "./logic/RandomSquareGenerator";
+// import GamePlay from './components/GamePlay'
 
 import SquareContext from "./context/SquareContext";
 import AnswerContext from "./context/AnswerContext";
@@ -52,7 +53,7 @@ const ChessGame = () => {
         count: count,
         gameCount: gameCount,
         handleGameCount: handleGameCount,
-        // totalTime: totalTime,
+        totalTime: totalTime,
       }}
     >
       <SquareContext.Provider value={square}>
@@ -68,6 +69,7 @@ const ChessGame = () => {
               <div>{totalTime === 0 ? '': totalTime}</div>
             </div>
             <GameButtons />
+            {/* <GamePlay /> */}
           </div>
         </div>
       </SquareContext.Provider>

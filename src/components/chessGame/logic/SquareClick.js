@@ -10,7 +10,7 @@ const squareClick = (e, square, value) => {
       value.handleAnswer(true);
       value.handleCount(-value.gameCount);
     } else {
-      console.log(`${e.target.className.slice(0,2)} does not equals ${square}`);
+      console.log(`${e.target.className.slice(0,2)} does not equal ${square}`);
     }
   };
   

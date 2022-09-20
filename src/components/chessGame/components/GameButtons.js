@@ -8,8 +8,6 @@ const GameButtons = () => {
 
   // const [totalTime, setTotalTime] = useState(value.totalTime)
 
-  console.log(value.totalTime);
-
   const gameLengthClick = (val) => {
     value.handleGameCount(val);
   };

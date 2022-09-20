@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import AnswerContext from "../context/AnswerContext";
+import SubmitTime from "./SubmitTime";
 
 const GameButtons = () => {
   const value = useContext(AnswerContext);
@@ -17,6 +18,7 @@ const GameButtons = () => {
       <button onClick={() => gameLengthClick(8)}>8</button>
       <button onClick={() => gameLengthClick(16)}>16</button>
       <div>{value.totalTime === 0 ? "" : value.totalTime}</div>
+      <div>{value.totalTime === 0 ? "" : <SubmitTime />}</div>
     </div>
   );
 };

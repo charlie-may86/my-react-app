@@ -7,9 +7,10 @@ const SubmitTime = () => {
   const [newTime, setNewTime] = useState({
     username: "",
     time: answer.totalTime,
-    game_length: "",
+    game_length: answer.gameCount,
   });
 
+  console.log(newTime);
   const handleIntials = (e) => {
     setNewTime({
       ...newTime,
@@ -21,10 +22,13 @@ const SubmitTime = () => {
       <form>
         <label htmlFor="intials">Initials</label>
         <input
-          type="username"
-          name="intials"
+          type="text"
+          name="username"
           value={newTime.username}
           onChange={handleIntials}
+          maxLength="3"
+          className='intialsInput'
+          
         />
         <label htmlFor="time">Time</label>
         <input type="float" name="time" value={newTime.time} readOnly />

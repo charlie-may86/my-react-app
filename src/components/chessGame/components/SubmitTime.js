@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import AnswerContext from "../context/AnswerContext";
+import axios from "axios";
 
 const SubmitTime = () => {
   const answer = useContext(AnswerContext);
@@ -10,16 +11,29 @@ const SubmitTime = () => {
     game_length: answer.gameCount,
   });
 
-  console.log(newTime);
   const handleIntials = (e) => {
     setNewTime({
       ...newTime,
       [e.target.name]: e.target.value,
     });
   };
+
+  const submitTime = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:9000/api/chess", newTime)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    answer.setTotalTime(0)
+  };
+
   return (
     <div className="timeForm">
-      <form>
+      <form onSubmit={submitTime}>
         <label htmlFor="intials">Initials</label>
         <input
           type="text"
@@ -27,13 +41,12 @@ const SubmitTime = () => {
           value={newTime.username}
           onChange={handleIntials}
           maxLength="3"
-          className='intialsInput'
-          
+          className="intialsInput"
         />
         <label htmlFor="time">Time</label>
         <input type="float" name="time" value={newTime.time} readOnly />
+        <button className="submitScore">Submit</button>
       </form>
-      <button className="submitScore">Submit</button>
     </div>
   );
 };

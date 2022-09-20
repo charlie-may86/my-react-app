@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import BoardPartDu from './components/BoardPartDu'
+import BoardPartDu from "./components/BoardPartDu";
 import Header from "./components/ChessHeader";
 import GameButtons from "./components/GameButtons";
 import RandomSquareGenerator from "./logic/RandomSquareGenerator";
@@ -54,6 +54,7 @@ const ChessGame = () => {
         gameCount: gameCount,
         handleGameCount: handleGameCount,
         totalTime: totalTime,
+        setTotalTime: setTotalTime,
       }}
     >
       <SquareContext.Provider value={square}>
@@ -66,7 +67,7 @@ const ChessGame = () => {
                 {count === 0 ? "start" : "stop"}
               </button>
               <div>{count === 0 ? "" : square}</div>
-              <div>{totalTime === 0 ? '': totalTime}</div>
+              <div>{totalTime === 0 ? "" : totalTime}</div>
             </div>
             <GameButtons />
             {/* <GamePlay /> */}

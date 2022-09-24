@@ -3,6 +3,7 @@ import BoardPartDu from "./components/BoardPartDu";
 import Header from "./components/ChessHeader";
 import GameButtons from "./components/GameButtons";
 import RandomSquareGenerator from "./logic/RandomSquareGenerator";
+import TopTen from './components/TopTen'
 // import GamePlay from './components/GamePlay'
 
 import SquareContext from "./context/SquareContext";
@@ -71,6 +72,8 @@ const ChessGame = () => {
             </div>
             <GameButtons />
             {/* <GamePlay /> */}
+            <TopTen />
+
           </div>
         </div>
       </SquareContext.Provider>

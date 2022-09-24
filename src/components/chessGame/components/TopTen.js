@@ -21,10 +21,11 @@ const TopTen = () => {
   } else {
     return (
       <div className="topTen">
+          <div>All Time Greatest</div>
         {topTen.map((x) => {
           return (
             <div className='topTenRow' key = {x.result_id} >
-              <div>{x.username}</div>
+              <div className='name' >{x.username}</div>
               <div>{x.time}</div>
             </div>
           );

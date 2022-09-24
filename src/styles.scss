@@ -358,6 +358,18 @@ section {
   display: flex;
 }
 
+.topTenRow {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.topTenRow .name {
+  text-transform: uppercase;
+}
+.topTenRow:nth-child(even) {
+  background-color: lightgray;
+}
+
 /*Resume */
 
 .resume {
